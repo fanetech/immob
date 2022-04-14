@@ -1,0 +1,9 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block titrepage %} Creer une maison{% endblock %}
+
+{% block body %}
+    {% form_theme formulaire 'bootstrap_5_layout.html.twig' %}
+    
+    {{ form(formulaire) }}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maison Details{% endblock %}
+
+{% block contenu %}
+    <h3>Detail Maison {{ house.id }}</h3>
+    
+    <div class="row">
+        Description : {{ house.description}}
+
+        Adresse : {{ house.adresse}}
+
+    </div>
+
+    
+{% endblock %}

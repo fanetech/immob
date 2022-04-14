@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MaisonsController!{% endblock %}
+
+{% block contenu %}
+    <h3>Maisons</h3>
+    
+    <div class="row">
+        
+        {% for m in maisons%}
+        
+
+            <div class="col-4 p-2">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{m.titre}} </h5>
+                        <div class="card-text">{{m.description}}</div>
+                        <a href=" {{ path( "maisons_detail", {id: m.id}  )  }} " class="btn btn-primary">!Voir</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        
+        {% endfor %}
+
+
+
+    </div>
+
+    
+{% endblock %}
